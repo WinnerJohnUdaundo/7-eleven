@@ -26,12 +26,16 @@ class Login extends CI_Controller
                 'role' => $staff->role,
             );
             $this->session->set_userdata('staff', $data);
-            $this->load->view('dashboad');
+            $this->load->view('Dashboard');
         } else {
             $data['error'] = 'Invalid username or password';
             echo '<script>alert("' . $data['error'] . '");</script>';
             $this->load->view('Login', $data);
         }
+    }
+    public function logout(){
+            $this->session->unset_userdata('user');
+            redirect('Login');
     }
 }
 ?>
