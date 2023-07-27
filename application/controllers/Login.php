@@ -26,7 +26,7 @@ class Login extends CI_Controller
                 'role' => $staff->role,
             );
             $this->session->set_userdata('staff', $data);
-            $this->load->view('Dashboard');
+            redirect('Dashboard');
         } else {
             $data['error'] = 'Invalid username or password';
             echo '<script>alert("' . $data['error'] . '");</script>';

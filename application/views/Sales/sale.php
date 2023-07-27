@@ -114,10 +114,14 @@
                     </ul>
                 </div>
             </div>
-
-         
             <div class="col-sm-10">
-                Hello
+                <h1 class="text-danger">Sales Report</h1>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Date/Time</th>
+                        <th>Subtotal</th>
+                        <th>Order Data</th>
+                    </tr>
             </div>
         </div>
     </div>
